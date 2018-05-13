@@ -15,16 +15,20 @@
 			<nav>
 				<div class="container">
 					<img src="img/logo.png" alt="logo">
+					<div class="mobile-menu">
+	                    <label for="toggle"><i class="fas fa-bars fa-2x"></i></label>
+	                    <input type="checkbox" id="toggle">
+	                </div>
 					<ul>
 						<li><a href="home">HOME</a></li>
 						<li><a href="about">ABOUT US</a></li>
 						<li><a href="services">SERVICES</a></li>
 						<li><a href="ourProjects">OUR PROJECTS</a></li>
-						<li><a href="#">OUR TEAM</a></li>
-						<li><a href="#">HAPPY CLIENTS</a></li>
-						<li><a href="#">PRICE</a></li>
+						<li><a href="#team">OUR TEAM</a></li>
+						<li><a href="#happyClient">HAPPY CLIENTS</a></li>
+						<li><a href="#prices">PRICE</a></li>
 						<li><a href="#">SOME FACTS</a></li>
-						<li><a href="#">CONTACT US</a></li>
+						<li><a href="#contact">CONTACT US</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -45,7 +49,7 @@
 				<div class="space">
 					<div class="left">
 						<p>Praesent metus urna, feugiat a placerat vel, elementum at leo. Quisque vel fermentum ipsum. Nulla at facilisis est, vel condimentum ligula. Mauris volutpat vitae risus sed pellentesque. Praesent fermentum neque ac tellus gravida, at varius sem accumsan. Nam porta erat id sapien consectetur. Fusce sed purus eros. Vivamus rhoncus, ipsum in tempus fermentum, orci leo facilisis purus. Nam porta erat id sapien consectetur. Fusce sed purus eros. Vivamus rhoncus, ipsum in tempus fermentum, orci leo facilisis purus.</p>
-						<button class="btn-style">learn more</button>
+						<button class="btn-style btn-left">learn more</button>
 					</div>
 					<div class="right">
 						<img src="img/video.png" alt="watch video">
@@ -59,22 +63,22 @@
 			<h2 class="hcenter">services</h2>
 			<p class="pcenter">services that we provide</p>
 			<div class="serv row">
-				<div class="oneservice">
+				<div class="oneservice linedown">
 					<img src="img/service1.png" alt="">
 					<h3>high quality design</h3>
 					<p>Praesent metus urna, feugiata placerat elementum</p>
 				</div>
-				<div class="oneservice">
+				<div class="oneservice linedown">
 					<img src="img/service2.png" alt="">
 					<h3>high quality design</h3>
 					<p>Praesent metus urna, feugiata placerat elementum</p>
 				</div>
-				<div class="oneservice">
+				<div class="oneservice linedown">
 					<img src="img/service3.png" alt="">
 					<h3>high quality design</h3>
 					<p>Praesent metus urna, feugiata placerat elementum</p>
 				</div>
-				<div class="oneservice">
+				<div class="oneservice linedown">
 					<img src="img/service4.png" alt="">
 					<h3>high quality design</h3>
 					<p>Praesent metus urna, feugiata placerat elementum</p>
@@ -82,23 +86,33 @@
 			</div>
 		</div>
 	</section>
-	<section id=ourProjects>
+	<section id="ourProjects">
 		<div class="container">
 			<h2 class="hcenter">our projects</h2>
-			<p class="pcenter">what we create</p>
-			<nav>
-				<ul>
-					<li><a href="#">ALL</a></li>
-					<li><a href="#">PHOTOS</a></li>
-					<li><a href="#">BRANDING</a></li>
-					<li><a href="#">ADVERTS</a></li>
-					<li><a href="#">DEVELOPMENT</a></li>
-					<li><a href="#">MISC</a></li>
-				</ul>
-			</nav>
+			<p class="pcenter gray">what we create</p>
+			<div class="flex-nav row">
+				<div class="secondNav">
+					<ul>
+						<li><a href="#">ALL</a></li>
+						<li><a href="#">PHOTOS</a></li>
+						<li><a href="#">BRANDING</a></li>
+						<li><a href="#">ADVERTS</a></li>
+						<li><a href="#">DEVELOPMENT</a></li>
+						<li><a href="#">MISC</a></li>
+					</ul>
+				</div>
+			</div>
 			<div class="gallery">
 				<div class="row">
-					<img src="img/Img1.jpg" alt="">
+					<div class="photo">
+						<div class="layer">
+							<div class="layer-content">
+								<h2>about</h2>
+								<p>Praesent metus urna, feugiat a placerat elementum at leo</p>
+							</div>
+							<img src="img/Img1.jpg" alt="">
+						</div>
+					</div>
 					<img src="img/Img2.jpg" alt="">
 					<img src="img/Img3.jpg" alt="">
 					<img src="img/Img4.jpg" alt="">
@@ -118,13 +132,53 @@
 		</div>
 	</section>
 	<section id="team">
-		<h2 class="hcenter">our team</h2>
-		<p class="pcenter">our co-workers</p>
-		<div class="carousel">
-			<ul>
-				<li></li>
-
-			</ul>
+		<div class="container">
+			<h2 class="hcenter">our team</h2>
+			<p class="pcenter gray">our co-workers</p>
+			<div class="workers row">
+				<div class="oneperson">
+					<img src="img/person1.png" alt="">
+					<h3>jane doe</h3>
+					<p>Master mind</p>
+					<div>
+						<button class="social-btn"><i class="fab fa-twitter"></i></button>
+						<button class="social-btn"><i class="fab fa-instagram"></i></button>
+						<button class="social-btn"><i class="fab fa-linkedin-in"></i></button>
+						<button class="social-btn"><i class="fab fa-facebook"></i></button>
+						<button class="social-btn"><i class="fab fa-youtube"></i></button>
+						<button class="social-btn"><i class="fab fa-google-plus-g"></i></button>
+						<button class="social-btn"><i class="fas fa-ellipsis-h"></i></button>
+					</div>
+				</div>
+				<div class="oneperson">
+					<img src="img/person2.png" alt="">
+					<h3>mike shiller</h3>
+					<p>Creative head</p>
+					<div>
+						<button class="social-btn"><i class="fab fa-twitter"></i></button>
+						<button class="social-btn"><i class="fab fa-instagram"></i></button>
+						<button class="social-btn"><i class="fab fa-linkedin-in"></i></button>
+						<button class="social-btn"><i class="fab fa-facebook"></i></button>
+						<button class="social-btn"><i class="fab fa-youtube"></i></button>
+						<button class="social-btn"><i class="fab fa-google-plus-g"></i></button>
+						<button class="social-btn"><i class="fas fa-ellipsis-h"></i></button>
+					</div>
+				</div>
+				<div class="oneperson">
+					<img src="img/person3.png" alt="">
+					<h3>anna johns</h3>
+					<p>Technical lead</p>
+					<div>
+						<button class="social-btn"><i class="fab fa-twitter"></i></button>
+						<button class="social-btn"><i class="fab fa-instagram"></i></button>
+						<button class="social-btn"><i class="fab fa-linkedin-in"></i></button>
+						<button class="social-btn"><i class="fab fa-facebook"></i></button>
+						<button class="social-btn"><i class="fab fa-youtube"></i></button>
+						<button class="social-btn"><i class="fab fa-google-plus-g"></i></button>
+						<button class="social-btn"><i class="fas fa-ellipsis-h"></i></button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section id="happyClient">
@@ -212,7 +266,7 @@
 		<div class="container">
 			<h2 class="hcenter">premium</h2>
 			<p class="pcenter gray">even more features available</p>
-			<div class="row">
+			<div class="row column">
 				<div class="leftPremium">
 					<img src="img/boxes.jpg" alt="">
 				</div>
@@ -292,16 +346,18 @@
 					<img src="img/share.png">
 					<h3 class="gray pcenter">tell about us:</h3>
 				</div>
-				<button class="icon-btn twitter"><i class="fab fa-twitter"></i></button>
-				<small class="gray">152</small>
-				<button class="icon-btn linkedin"><i class="fab fa-linkedin-in"></i></button>
-				<small class="gray">31</small>
-				<button class="icon-btn fb"><i class="fab fa-facebook"></i></button>
-				<small class="gray">164</small>
-				<button class="icon-btn google"><i class="fab fa-google-plus-g"></i></button>
-				<small class="gray">22</small>
-				<button class="icon-btn pinterest"><i class="fab fa-pinterest"></i></button>
-				<small class="gray">165</small>
+				<div class="buttons">
+					<button class="icon-btn twitter"><i class="fab fa-twitter"></i></button>
+					<small class="gray">152</small>
+					<button class="icon-btn linkedin"><i class="fab fa-linkedin-in"></i></button>
+					<small class="gray">31</small>
+					<button class="icon-btn fb"><i class="fab fa-facebook"></i></button>
+					<small class="gray">164</small>
+					<button class="icon-btn google"><i class="fab fa-google-plus-g"></i></button>
+					<small class="gray">22</small>
+					<button class="icon-btn pinterest"><i class="fab fa-pinterest"></i></button>
+					<small class="gray">165</small>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -310,14 +366,14 @@
 			<h2 class="hcenter">contact us</h2>
 			<p class="pcenter gray">our agency located in Melbourne, Australia</p>
 			<div class="contact-form">
-				<form class="row">
+				<form>
 					<div class="form-name row">
 						<input type="text" placeholder="NAME"/>
 						<input type="email" placeholder="EMAIL"/>
 					</div>
 					<div class="rest-of-form row">
 						<input type="text" placeholder="SUBJECT"/>
-						<textarea rows="20" cols="50" placeholder="MESSAGE"></textarea>
+						<textarea rows="10" cols="20" placeholder="MESSAGE"></textarea>
 						<input type="submit" value="send message" class="btn-style">
 					</div>
 				</form>
@@ -371,6 +427,7 @@
 				<input type="email" placeholder="Email to subscribe">
 				<input type="submit" value="subscribe" class="btn-style"/>
 			</div>
+			
 		</div>
 	</footer>
 	<script type="text/javascript" src="index.js"></script>
