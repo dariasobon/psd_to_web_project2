@@ -160,42 +160,6 @@ body {
   font-size: 30px;
 }
 
-#home #carousel {
-  overflow: hidden;
-}
-
-#home #carousel ul {
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-}
-
-#home #carousel ul li {
-  display: inline-block;
-}
-
-#home #carousel #pagination {
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  padding: 0;
-}
-
-#home #carousel #pagination li {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  margin: 0 4px;
-}
-
-#home #carousel #pagination li.active {
-  background-color: #b88b58;
-}
-
 #about .pcenter {
   color: #aeaeae;
 }
@@ -303,6 +267,11 @@ body {
   padding: 10px;
 }
 
+#ourProjects .gallery .row .photo:hover .layer .layer-content {
+  transform: scale(1);
+  cursor: pointer;
+}
+
 #ourProjects .gallery .row .photo .layer {
   display: inline-block;
   position: relative;
@@ -323,11 +292,6 @@ body {
 #ourProjects .gallery .row .photo .layer img {
   vertical-align: middle;
   line-height: 0;
-}
-
-.gallery .photo:hover .layer {
-  transform: scale(1);
-  cursor: pointer;
 }
 
 #team {
@@ -814,26 +778,34 @@ footer .container .subscribe input:last-of-type {
 }
 
 @media (max-width: 991px) {
-  header .navbar nav .container .mobile-menu {
+  #home .navbar nav .container .mobile-menu {
+    position: relative;
     display: block;
   }
-  header .navbar nav .container .mobile-menu label {
+  #home .navbar nav .container .mobile-menu label {
+    position: absolute;
+    top: 50%;
+    right: 15px;
     display: inline-block;
     cursor: pointer;
     color: white;
     line-height: 70px;
     transition: 0.6s;
   }
-  header .navbar nav .container ul {
+  #home .navbar nav .container .mobile-menu input {
     display: none;
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    width: 50%;
   }
-  header .navbar nav .container ul li {
+  #home .navbar nav .container .mobile-menu input:checked + ul {
+    display: block;
+  }
+  #home .navbar nav .container ul {
+    display: none;
+  }
+  #home .navbar nav .container ul li {
     display: block;
     text-align: center;
+    font-size: 14px;
+    line-height: 1;
   }
   #premium .column {
     display: -ms-flexbox;

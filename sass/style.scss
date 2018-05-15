@@ -152,37 +152,6 @@ body {
 			}
 		}
 	}
-	#carousel {
-			overflow: hidden;
-		ul {
-			display: flex;
-    		list-style-type: none;
-			li {
-				display: inline-block;
-			}
-		}
-			#pagination {
-			    position: absolute;
-			    bottom: 25px;
-			    left: 50%;
-			    transform: translateX(-50%);
-			    margin: 0;
-			    padding: 0;
-			}
-
-			#pagination li {
-			    display: inline-block;
-			    width: 8px;
-			    height: 8px;
-			    border-radius: 50%;
-			    border: 2px solid #fff;
-			    margin: 0 4px;
-			}
-
-			#pagination li.active {
-			    background-color: $maincolor;
-			}
-		}
 }
 
 #about {
@@ -278,6 +247,15 @@ body {
 			justify-content: center;
 			.photo {
 				padding: 10px;
+
+				&:hover {
+					.layer {
+						.layer-content {
+							transform: scale(1);
+        					cursor: pointer;
+						}
+					}
+				}
 				.layer {
 					display: inline-block;
 					position: relative;
@@ -302,10 +280,7 @@ body {
 	}
 }
 
-.gallery .photo:hover .layer {
-        transform: scale(1);
-        cursor: pointer;
-    }
+
 
 #team {
 	background-image: url("../img/background2.jpg");
@@ -708,29 +683,37 @@ footer {
 }
 
 @media (max-width: 991px) {
-	header {
+	#home {
 		.navbar {
 			nav {
 				.container {
 					.mobile-menu {
+						position: relative;
 						display: block;
 						label {
+							position: absolute;
+							top: 50%;
+							right: 15px;
 							display: inline-block;
 						    cursor: pointer;
 						    color: white;
 						    line-height: 70px;
 						    transition: 0.6s;
 						}
+						input {
+							display: none;
+							&:checked+ul {
+					            display: block;
+					        }
+						}
 					}
 					ul {
 						display: none;
-			            position: absolute;
-			            right: 50%;
-			            transform: translateX(+50%);
-			            width: 50%;
 						li {
 							display: block;
 							text-align: center;
+							font-size: 14px;
+							line-height: 1;
 						}
 					}
 				}

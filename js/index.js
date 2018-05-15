@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+
+    $(":checkbox").click(function(event) {
+        if ($(this).is(":checked"))
+            $(".hamburger").show();
+        else
+            $(".hamburger").hide();
+    });
+
     let scrollTop = $(".scrollTop");
 
     $(window).scroll(function() {
