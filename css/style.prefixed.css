@@ -131,19 +131,6 @@ body {
 
 #home .navbar nav .mobile-menu {
   display: none;
-  text-align: right;
-}
-
-#home .navbar nav .mobile-menu label {
-  display: inline-block;
-}
-
-#home .navbar nav #mobile-menu {
-  display: none;
-}
-
-#home .navbar nav #mobile-menu:checked + ul {
-  display: block;
 }
 
 #home .navbar .header-content {
@@ -171,6 +158,42 @@ body {
 
 #home .navbar .header-content p {
   font-size: 30px;
+}
+
+#home #carousel {
+  overflow: hidden;
+}
+
+#home #carousel ul {
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+#home #carousel ul li {
+  display: inline-block;
+}
+
+#home #carousel #pagination {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+}
+
+#home #carousel #pagination li {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 0 4px;
+}
+
+#home #carousel #pagination li.active {
+  background-color: #b88b58;
 }
 
 #about .pcenter {
@@ -234,7 +257,7 @@ body {
   border-radius: 25px;
   max-width: 600px;
   line-height: 56px;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: #ededed;
 }
 
@@ -244,7 +267,7 @@ body {
   -ms-flex-pack: center;
       justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 0 15px;
 }
 
 #ourProjects .flex-nav .secondNav ul li {
@@ -269,6 +292,15 @@ body {
   text-decoration: none;
   display: block;
   color: black;
+}
+
+#ourProjects .gallery .row {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+#ourProjects .gallery .row .photo {
+  padding: 10px;
 }
 
 #ourProjects .gallery .row .photo .layer {
@@ -695,8 +727,9 @@ footer {
 
 footer .scrollTop {
   position: fixed;
-  left: 50px;
-  bottom: 50px;
+  left: 30px;
+  bottom: 30px;
+  cursor: pointer;
 }
 
 footer .container {
@@ -784,6 +817,13 @@ footer .container .subscribe input:last-of-type {
   header .navbar nav .container .mobile-menu {
     display: block;
   }
+  header .navbar nav .container .mobile-menu label {
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    line-height: 70px;
+    transition: 0.6s;
+  }
   header .navbar nav .container ul {
     display: none;
     position: absolute;
@@ -855,21 +895,19 @@ footer .container .subscribe input:last-of-type {
     width: 80%;
     margin: 30px auto 10px;
   }
-  #ourProjects .secondNav {
-    margin: 0 20px;
+  #ourProjects .flex-nav .secondNav {
+    margin: 10px 20px;
     width: 300px;
   }
-  #ourProjects .secondNav ul {
+  #ourProjects .flex-nav .secondNav ul {
     -ms-flex-direction: column;
         flex-direction: column;
     padding: 0 10px;
   }
-  #ourProjects .secondNav ul li {
+  #ourProjects .flex-nav .secondNav ul li {
     text-align: center;
-  }
-  #ourProjects img {
-    margin: 0 auto;
-    padding: 20px;
+    border-right: none;
+    border-top: none;
   }
   #team .row {
     -ms-flex-direction: column;
@@ -909,6 +947,15 @@ footer .container .subscribe input:last-of-type {
   }
   #mapsection .info-box {
     display: none;
+  }
+  footer .scrollTop {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+  }
+  footer .scrollTop img {
+    width: 40px;
+    height: 40px;
   }
   footer .content {
     display: -ms-flexbox;
